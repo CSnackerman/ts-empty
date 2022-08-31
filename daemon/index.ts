@@ -1,8 +1,10 @@
-import express from 'express';
-import helloLoggerMiddleware from 'Server/middleware/LoggerMiddleware';
-import helloRouter from 'Server/router';
+import express from 'express'
+import 'reflect-metadata'
 
-const port = 3000 || process.env.PORT
+import helloLoggerMiddleware from 'Server/middleware/LoggerMiddleware'
+import helloRouter from 'Server/router'
+
+const port = process.env.PORT || 3000
 const server = express()
 
 server.get('/apiTest', (req, res) => {

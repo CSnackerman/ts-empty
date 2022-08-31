@@ -23,10 +23,12 @@
       "JSON/*": ["resource/json/*"],
       "String/*": ["resource/string/*"],
       "Style/*": ["resource/style/*"],
-      "Template/*": ["resource/template/*"],
+      "Template/*": ["resource/template/*"]
     },
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "ts-node": {
     "transpileOnly": true,
