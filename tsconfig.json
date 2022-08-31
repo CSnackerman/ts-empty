@@ -1,10 +1,10 @@
 {
-  "include": [
-    "app-client/**/*",
-    "app-server/**/*",
-    "lib/**/*"
-  ],
   "exclude": ["node_modules"],
+  "include": [
+    "application/**/*",
+    "daemon/**/*",
+    "library/**/*"
+  ],
   "compilerOptions": {
     "lib": ["DOM", "ES5", "ES6", "ES7", "ES2020", "ES2021"],
     "sourceMap": true,
@@ -13,13 +13,17 @@
     "target": "ES3",
     "baseUrl": "./",
     "paths": {
-      "App-Client/*": ["app-client/*"],
-      "App-Server/*": ["app-server/*"],
-      "Server/*": ["lib/server/*"],
-      "Api/*": ["lib/api/*"],
-      "Client/*": ["lib/client/*"],
-      "Res/*": ["res/*"],
-      "Style/*": ["res/style/*"]
+      "Application/*": ["application/*"],
+      "Daemon/*": ["daemon/*"],
+      "Server/*": ["library/server/*"],
+      "Api/*": ["library/api/*"],
+      "Client/*": ["library/client/*"],
+      "Project/*": ["project/*"],
+      "Image/PNG/*": ["resource/image/png/*"],
+      "JSON/*": ["resource/json/*"],
+      "String/*": ["resource/string/*"],
+      "Style/*": ["resource/style/*"],
+      "Template/*": ["resource/template/*"],
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true

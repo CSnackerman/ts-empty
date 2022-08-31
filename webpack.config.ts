@@ -5,18 +5,21 @@ import 'webpack-dev-server'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin'
 
+// TODO: Why not relative import?
+import ProjectConfiguration from './project/configuration';
+
 const clientConfig: webpack.Configuration = {
     name: 'app-client',
-    entry: path.resolve(__dirname, 'app-client/index.ts'),
+    entry: path.resolve(__dirname, 'application/index.ts'),
     output: {
-        filename: 'client.[contenthash].js',
-        path: path.resolve(__dirname, 'release/app-client'),
+        filename: 'client.[contenthash].min.js',
+        path: path.resolve(__dirname, 'release/client'),
         clean: true
     },
     devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'release/app-client')
+            directory: path.resolve(__dirname, 'release/client')
         },
         compress: true,
         port: 3001,
@@ -27,7 +30,7 @@ const clientConfig: webpack.Configuration = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve(__dirname, 'lib/client/template/index.html')
+            template: path.resolve(__dirname, 'resource/template/index.html')
         })
     ],
     optimization: {

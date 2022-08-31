@@ -8,6 +8,7 @@ import helloHomePage from 'Client/page/HomePage';
 import helloTestPage from 'Client/page/TestPage';
 import helloLoggerMiddleware from 'Server/middleware/LoggerMiddleware';
 import helloRouter from 'Server/router';
+
 import 'Style/global.style.scss'
 
 const app = async () => {
@@ -34,4 +35,4 @@ const app = async () => {
     )
 }
 
-app().catch((e: Error) => console.log(e))
+app().catch((e: Error) => console.error(e))

@@ -1,12 +1,12 @@
 {
-  "name": "webpack-multitarget",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ts-empty",
+  "version": "0.0.1",
+  "description": "Empty Full-stack TypeScript Web Application",
   "scripts": {
-    "start": "concurrently \"node release/app-client",
+    "start": "concurrently \"node release/client/client.ts\" \"ts-node daemon/index.ts\"",
     "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
     "dev:client": "webpack serve --open --mode development",
-    "dev:server": "nodemon app-server/index.ts",
+    "dev:server": "nodemon daemon/index.ts",
     "build:client": "webpack --mode production",
     "build:server": "Server does not require a build.",
     "clean": "rm -rf release/*",
