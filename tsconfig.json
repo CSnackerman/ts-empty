@@ -1,0 +1,32 @@
+{
+  "include": [
+    "app-client/**/*",
+    "app-server/**/*",
+    "lib/**/*"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "lib": ["DOM", "ES5", "ES6", "ES7", "ES2020", "ES2021"],
+    "sourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES3",
+    "baseUrl": "./",
+    "paths": {
+      "App-Client/*": ["app-client/*"],
+      "App-Server/*": ["app-server/*"],
+      "Server/*": ["lib/server/*"],
+      "Api/*": ["lib/api/*"],
+      "Client/*": ["lib/client/*"],
+      "Res/*": ["res/*"],
+      "Style/*": ["res/style/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "require": ["tsconfig-paths/register"]
+  }
+}
